@@ -14,6 +14,12 @@ body {
   margin: 0 auto;
 }
 
+h1 {
+  text-align: center;
+  font-size: larger;
+  margin-top: 3rem;
+}
+
 main {
   display: flex;
   flex-direction: column;
