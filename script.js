@@ -27,3 +27,15 @@ function addNewItem() {
 function removeItem() {
   todoList.innerText = "";
 }
+
+todoList.addEventListener("changed", function (e) {
+  const checkbox = e.target;
+  const liElement = checkbox.parentElement;
+  if (checkbox.checked) {
+    liElement.style.textDecoration = "line-through";
+    liElement.classList.add("todo-done");
+  } else {
+    liElement.style.textDecoration = "";
+    liElement.classList.remove("todo-done");
+  }
+});
