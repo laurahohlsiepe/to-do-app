@@ -11,12 +11,19 @@ deletebtn.addEventListener("click", removeItem);
 function addNewItem() {
   const newTextNode = todoInput.value;
   const li = document.createElement("li");
+
+  const toDocheckBox = document.createElement("input");
+  toDocheckBox.type = "checkbox";
+  li.appendChild(toDocheckBox);
+
   const todoTextNode = document.createTextNode(newTextNode);
   li.appendChild(todoTextNode);
+
   todoList.appendChild(li);
+
   todoInput.value = "";
 }
 
 function removeItem() {
-  todoList.innerHTML = "";
+  todoList.innerText = "";
 }
